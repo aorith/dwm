@@ -216,7 +216,7 @@ _merge_branches() {
             git merge "$branch" -m "merge: $branch" || _err "Something went wrong while merging"
         fi
     done
-    _info "All branches merged successfully, now you can run $0 build to build&install the new version."
+    _info "All branches merged successfully, now you can run \"$0 build\" to build&install the new version."
 }
 
 _diff() {
