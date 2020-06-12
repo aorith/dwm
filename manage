@@ -232,6 +232,7 @@ _diff() {
     done
     _info "------------------------- DIFFs END -----------------------------
     "
+    git checkout master
 }
 
 _new_patch() {
