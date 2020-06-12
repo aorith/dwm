@@ -228,6 +228,9 @@ _diff() {
         if [ "$branch" != "master" ] && [ "$branch" != "$UPSTREAM_BRANCH" ]; then
             # TODO: Consider using this to have diffs backups
             git diff "${UPSTREAM_BRANCH}..${branch}"
+            echo
+            read -p "Press any key to continue"
+            echo
         fi
     done
     _info "------------------------- DIFFs END -----------------------------
