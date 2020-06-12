@@ -41,8 +41,9 @@ $(tput setaf 4)${0#*/} build$(tput sgr0)
     and hard resets it with a manage fullclean
 
 $(tput setaf 4)${0#*/} merge-branches$(tput sgr0)
-    run this to merge all the branches to the upstream branch so you can then build
-    do not commit those merges in upstream brach!!!!
+    run this to merge all the branches into \"$UPSTREAM_BRANCH\" branch
+    then you can run \"$0 build\" to build & install the new version
+    $(tput setaf 1)do not commit the merges on \"$UPSTREAM_BRANCH\" branch!! use them to build$(tput sgr0)
 
 $(tput setaf 4)${0#*/} diff$(tput sgr0)
     runs a diff against all branches on upstream branch
