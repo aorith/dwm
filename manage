@@ -69,8 +69,8 @@ $(tput setaf 4)${0#*/} fullclean$(tput sgr0)
 }
 
 _push_all() {
-    git checkout master &&
     _clean &&
+    git checkout master &&
     git push --all origin
 }
 
@@ -233,9 +233,7 @@ _diff() {
             echo
         fi
     done
-    _info "------------------------- DIFFs END -----------------------------
-    "
-    git checkout master
+    _info "------------------------- DIFFs END -----------------------------"
 }
 
 _new_patch() {
@@ -244,7 +242,7 @@ _new_patch() {
     1. Download the patch \"*.diff\" file somewhere.
     2. Make a full clean of the \"$UPSTREAM_BRANCH\" branch:
         ${0#*/} fullclean
-    3. $(tput setaf 1; tput bold)Switch to ${UPSTREAM_BRANCH} branch$(tput setaf 4) and create a new branch with the patch name, eg:
+    3. $(tput setaf 1; tput bold)Switch to \"${UPSTREAM_BRANCH}\" branch$(tput sgr0; tput setaf 4) and create a new branch with the patch name, eg:
         git checkout \"$UPSTREAM_BRANCH\"
         git branch vanity-gapps
     4. Switch to that branch
