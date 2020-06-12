@@ -221,7 +221,7 @@ _merge_branches() {
 _diff() {
     git checkout master
     git checkout "$UPSTREAM_BRANCH" &&
-    _fullclean &&
+    _clean &&
     _info "------------------------- DIFFs START -----------------------------
     " &&
     for branch in $(_branches); do
